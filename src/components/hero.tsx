@@ -32,14 +32,16 @@ const Hero = () => {
             </p>
           </span>
         </div>
-        <div className="relative rounded-full overflow-hidden border h-52 w-52">
-          <Image
-            src={pfp}
-            alt="pfp"
-            fill
-            objectFit="contain"
-            className="p-2 rounded-full "
-          />
+        <div className="p-2 border-2 rounded-full dark:border-zinc-700 hover:border-zinc-500 dark:hover:border-zinc-400  transition ease-in ">
+          <div className="relative rounded-full overflow-hidden h-52 w-52 ">
+            <Image
+              src={pfp}
+              alt="pfp"
+              fill
+              objectFit="contain"
+              className="rounded-full hover:scale-125 transition ease-in"
+            />
+          </div>
         </div>
       </div>
       <div className="mt-4 flex gap-4">
