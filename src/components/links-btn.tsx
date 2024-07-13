@@ -19,7 +19,7 @@ const LinksBtn = ({ links }: { links: { github: string; live: string } }) => {
       <Button
         size={"sm"}
         variant={"secondary"}
-        className="flex gap-2 items-center"
+        className="border dark:border-zinc-700 flex gap-2 items-center"
         onClick={() => router.push(links.github)}
       >
         <Github size={15} />

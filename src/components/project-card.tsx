@@ -55,7 +55,7 @@ const ProjectCard = ({
             </div>
           </div>
         </div>
-        <div className="px-1 flex gap-2">
+        <div className="px-1 grid md:flex gap-2">
           <LinksBtn links={links} />
         </div>
       </div>

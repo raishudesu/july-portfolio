@@ -1,5 +1,7 @@
 import Contact from "@/components/contact";
+import Footer from "@/components/footer";
 import Hero from "@/components/hero";
+import MyLinks from "@/components/my-links";
 import Navbar from "@/components/navbar";
 import Projects from "@/components/projects";
 import TechStack from "@/components/tech-stack";
@@ -13,6 +15,8 @@ export default function Home() {
         <TechStack />
         <Projects />
         <Contact />
+        <MyLinks />
+        <Footer />
       </div>
     </main>
   );

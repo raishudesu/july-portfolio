@@ -44,7 +44,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="mt-4 flex gap-4">
+      <div className="mt-4 grid md:flex gap-2">
         <Button size={"sm"} className="flex gap-2 items-center">
           <CirclePlus size={15} />
           Hire me

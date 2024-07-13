@@ -39,7 +39,7 @@ const ContactForm = () => {
 
   return (
     <Form {...form}>
-      <form className="space-y-4">
+      <form className="grid space-y-4">
         <FormField
           control={form.control}
           name="firstName"
@@ -47,7 +47,11 @@ const ContactForm = () => {
             <FormItem>
               <FormLabel>First Name</FormLabel>
               <FormControl>
-                <Input placeholder="Enter your first name" {...field} />
+                <Input
+                  placeholder="Enter your first name"
+                  className="bg-muted"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -60,7 +64,11 @@ const ContactForm = () => {
             <FormItem>
               <FormLabel>Last Name</FormLabel>
               <FormControl>
-                <Input placeholder="Enter your last name" {...field} />
+                <Input
+                  placeholder="Enter your last name"
+                  className="bg-muted"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -76,6 +84,7 @@ const ContactForm = () => {
                 <Textarea
                   placeholder="Your message goes here"
                   rows={6}
+                  className="bg-muted"
                   {...field}
                 />
               </FormControl>
@@ -83,7 +92,9 @@ const ContactForm = () => {
             </FormItem>
           )}
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit" className="md:self-start">
+          Submit
+        </Button>
       </form>
     </Form>
   );
