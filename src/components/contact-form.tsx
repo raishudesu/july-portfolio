@@ -3,33 +3,17 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "./ui/textarea";
-
-const formSchema = z.object({
-  firstName: z.string().min(2, {
-    message: "firstName must be at least 2 characters.",
-  }),
-  lastName: z.string().min(2, {
-    message: "lastName must be at least 2 characters.",
-  }),
-  message: z.string().min(5, {
-    message: "Message must be at least 5 characters.",
-  }),
-});
+import { Form } from "@/components/ui/form";
+import { submitForm } from "@/actions/form-submit";
+import { FormSchema } from "@/lib/zod";
+import { useFormState } from "react-dom";
+import { useEffect } from "react";
+import FormInputFields from "./form-input-fields";
+import { toast } from "sonner";
 
 const ContactForm = () => {
-  const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema),
+  const form = useForm<z.infer<typeof FormSchema>>({
+    resolver: zodResolver(FormSchema),
     defaultValues: {
       firstName: "",
       lastName: "",
@@ -37,64 +21,36 @@ const ContactForm = () => {
     },
   });
 
+  const initialState = {
+    errors: {},
+  };
+
+  const [state, formAction] = useFormState(submitForm, initialState);
+
+  useEffect(() => {
+    if (state.errors) {
+      (["firstName", "lastName", "message"] as const).forEach((key) => {
+        if (state.errors[key]) {
+          form.setError(key, {
+            type: "manual",
+            message: state.errors[key][0],
+          });
+        }
+      });
+    } else {
+      form.clearErrors();
+      form.reset();
+
+      toast("Your message has been sent.", {
+        description: "Thanks for hitting me up! 🎉",
+      });
+    }
+  }, [state, form]);
+
   return (
     <Form {...form}>
-      <form className="grid space-y-4">
-        <FormField
-          control={form.control}
-          name="firstName"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>First Name</FormLabel>
-              <FormControl>
-                <Input
-                  placeholder="Enter your first name"
-                  className="bg-muted"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="lastName"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Last Name</FormLabel>
-              <FormControl>
-                <Input
-                  placeholder="Enter your last name"
-                  className="bg-muted"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <FormField
-          control={form.control}
-          name="message"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Message</FormLabel>
-              <FormControl>
-                <Textarea
-                  placeholder="Your message goes here"
-                  rows={6}
-                  className="bg-muted"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-        <Button type="submit" className="md:self-start">
-          Submit
-        </Button>
+      <form action={formAction} className="grid space-y-4">
+        <FormInputFields form={form} />
       </form>
     </Form>
   );
