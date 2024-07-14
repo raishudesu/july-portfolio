@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Links = () => {
   return (
-    <div className="w-full border rounded-lg px-4 py-2">
+    <div id="links" className="w-full border rounded-lg px-4 py-2">
       <div className="flex items-center justify-between">
         <h3 className="flex gap-1 items-center font-medium text-lg">
           Follow Me

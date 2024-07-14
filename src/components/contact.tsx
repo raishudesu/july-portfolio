@@ -3,7 +3,7 @@ import { Badge } from "./ui/badge";
 
 const Contact = () => {
   return (
-    <div className="w-full">
+    <div id="contact" className="w-full">
       <div className="flex flex-col gap-4">
         <div className="flex flex-wrap justify-between items-start">
           <Badge className="bg-zinc-100 hover:bg-zinc-200 flex gap-2">

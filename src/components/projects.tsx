@@ -5,7 +5,7 @@ import { Fragment } from "react";
 
 const Projects = () => {
   return (
-    <div className="w-full rounded-xl">
+    <div id="projects" className="w-full rounded-xl">
       <div className="flex flex-col gap-4">
         <div className="flex flex-wrap justify-between items-start">
           <Badge className="bg-zinc-100 hover:bg-zinc-200 flex gap-2">
