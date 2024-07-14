@@ -14,7 +14,7 @@ const NavBtns = () => {
         className="flex gap-2"
       >
         <House size={15} />
-        Home
+        <span className="hidden md:block">Home</span>
       </Button>
 
       <Link
@@ -27,10 +27,10 @@ const NavBtns = () => {
         isDynamic={true}
         ignoreCancelEvents={false}
         offset={-100}
-        className="text-sm font-medium p-2 flex gap-2 items-center bg-muted cursor-pointer"
+        className="rounded-md text-sm font-medium p-2 px-3 flex gap-2 items-center bg-muted cursor-pointer"
       >
         <PanelTop size={15} />
-        Projects
+        <span className="hidden md:block">Projects</span>
       </Link>
       <Link
         activeClass="active"
@@ -42,10 +42,10 @@ const NavBtns = () => {
         isDynamic={true}
         ignoreCancelEvents={false}
         offset={-100}
-        className="text-sm font-medium p-2 flex gap-2 items-center bg-muted cursor-pointer"
+        className="rounded-md text-sm font-medium p-2 px-3 flex gap-2 items-center bg-muted cursor-pointer"
       >
         <CircleUserRound size={15} />
-        Contact
+        <span className="hidden md:block">Contact</span>
       </Link>
       <Link
         activeClass="active"
@@ -56,11 +56,10 @@ const NavBtns = () => {
         duration={500}
         isDynamic={true}
         ignoreCancelEvents={false}
-        // offset={-100}
-        className="text-sm font-medium p-2 flex gap-2 items-center bg-muted cursor-pointer"
+        className="rounded-md text-sm font-medium p-2 px-3 flex gap-2 items-center bg-muted cursor-pointer"
       >
         <Link2 size={15} />
-        Links
+        <span className="hidden md:block">Links</span>
       </Link>
     </>
   );
