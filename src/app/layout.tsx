@@ -6,7 +6,7 @@ import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
   title: "Barysh Bacaltos",
-  description: "An Aspiring Full-stack Developer.",
+  description: "An Aspiring Software Developer.",
 };
 
 export default function RootLayout({

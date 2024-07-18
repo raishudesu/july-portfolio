@@ -2,10 +2,11 @@ import { techStack } from "@/lib/data";
 import { Badge } from "./ui/badge";
 import { Fragment } from "react";
 import StackCard from "./stack-card";
+import AnimationWrapper from "./animation-wrapper";
 
 const TechStack = () => {
   return (
-    <div className="w-full rounded-xl">
+    <div className="mt-16 w-full rounded-xl overflow-hidden">
       <div className="flex flex-col gap-4">
         <div className="flex flex-wrap justify-between items-start">
           <Badge className="bg-zinc-100 hover:bg-zinc-200 flex gap-2">
@@ -18,16 +19,19 @@ const TechStack = () => {
       <p className="mt-4 font-mono tracking-tight">
         🚀 These are the technologies I use on building my applications.
       </p>
+
       <div className="mt-6 grid md:grid-cols-2 gap-4">
         {techStack.map(({ path, alt, name, documentationUrl, desc }, index) => (
           <Fragment key={index}>
-            <StackCard
-              path={path}
-              alt={alt}
-              name={name}
-              documentationUrl={documentationUrl}
-              desc={desc}
-            />
+            <AnimationWrapper>
+              <StackCard
+                path={path}
+                alt={alt}
+                name={name}
+                documentationUrl={documentationUrl}
+                desc={desc}
+              />
+            </AnimationWrapper>
           </Fragment>
         ))}
       </div>

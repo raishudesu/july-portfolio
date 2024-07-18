@@ -1,4 +1,4 @@
-import { Github } from "lucide-react";
+import { Coffee, Github } from "lucide-react";
 import Link from "next/link";
 
 const Links = () => {
@@ -15,6 +15,13 @@ const Links = () => {
             className="p-4 rounded-lg border "
           >
             <Github size={20} />
+          </Link>
+          <Link
+            href={"https://www.buymeacoffee.com/bacaltosbarysh"}
+            target="_blank"
+            className="p-4 rounded-lg border "
+          >
+            <Coffee size={20} />
           </Link>
         </div>
       </div>

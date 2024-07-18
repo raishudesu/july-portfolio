@@ -1,10 +1,11 @@
-import { Link as LinkIcon, Github } from "lucide-react";
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
 import { Fragment } from "react";
 import { Badge } from "./ui/badge";
-import { Button } from "./ui/button";
 import LinksBtn from "./links-btn";
+import { useEffect, useRef } from "react";
+import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 
 type ProjectCard = {
   projectName: string;
@@ -26,8 +27,39 @@ const ProjectCard = ({
   links,
   stack,
 }: ProjectCard) => {
+  const offsetX = useMotionValue(0);
+  const offsetY = useMotionValue(0);
+
+  const maskImage = useMotionTemplate`radial-gradient(125px 125px at ${offsetX}px ${offsetY}px, black, transparent)`;
+
+  const border = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const updateMousePosition = (e: MouseEvent) => {
+      if (!border.current) return;
+      const borderRect = border.current?.getBoundingClientRect();
+
+      offsetX.set(e.x - borderRect.x);
+      offsetY.set(e.y - borderRect.y);
+    };
+
+    window.addEventListener("mousemove", updateMousePosition);
+
+    return () => {
+      window.removeEventListener("mousemove", updateMousePosition);
+    };
+  }, []);
+
   return (
-    <div className="p-4 w-full flex gap-2 items-center bg-muted rounded-lg border dark:border-zinc-700 hover:border-zinc-500 dark:hover:border-zinc-400  transition ease-in">
+    <div className="relative p-4 w-full h-full flex gap-2 items-center bg-muted rounded-lg border ">
+      <motion.div
+        className="absolute inset-0 border border-zinc-900 dark:border-zinc-300 rounded-lg"
+        style={{
+          WebkitMaskImage: maskImage,
+          maskImage,
+        }}
+        ref={border}
+      ></motion.div>
       <div className="grid gap-6">
         <div className="relative h-10 w-10 rounded-full">
           <Image

@@ -2,10 +2,11 @@ import { projects } from "@/lib/data";
 import ProjectCard from "./project-card";
 import { Badge } from "./ui/badge";
 import { Fragment } from "react";
+import AnimationWrapper from "./animation-wrapper";
 
 const Projects = () => {
   return (
-    <div id="projects" className="w-full rounded-xl">
+    <div id="projects" className="w-full overflow-hidden rounded-xl ">
       <div className="flex flex-col gap-4">
         <div className="flex flex-wrap justify-between items-start">
           <Badge className="bg-zinc-100 hover:bg-zinc-200 flex gap-2">
@@ -34,14 +35,16 @@ const Projects = () => {
             index
           ) => (
             <Fragment key={index}>
-              <ProjectCard
-                projectName={projectName}
-                projectImageUrl={projectImageUrl}
-                projectImageAlt={projectImageAlt}
-                projectDescription={projectDescription}
-                links={links}
-                stack={stack}
-              />
+              <AnimationWrapper>
+                <ProjectCard
+                  projectName={projectName}
+                  projectImageUrl={projectImageUrl}
+                  projectImageAlt={projectImageAlt}
+                  projectDescription={projectDescription}
+                  links={links}
+                  stack={stack}
+                />
+              </AnimationWrapper>
             </Fragment>
           )
         )}

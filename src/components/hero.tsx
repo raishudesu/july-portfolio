@@ -12,9 +12,9 @@ const Hero = () => {
           <div className="flex flex-wrap justify-between items-start">
             <Badge className="bg-zinc-100 hover:bg-zinc-200 flex gap-2">
               <div className="bg-zinc-500 h-1.5 w-1.5 rounded-full"></div>
-              <span className="text-zinc-500">Full-stack Developer</span>
+              <span className="text-zinc-500">Software Developer</span>
             </Badge>
-            <Badge className="bg-green-100 dark:bg-green-200 hover:bg-green-300 flex gap-2">
+            <Badge className="bg-green-100 dark:bg-green-200 hover:bg-green-200 flex gap-2">
               <div className="bg-green-500 dark:bg-green-600 h-1.5 w-1.5 rounded-full animate-pulse"></div>
               <span className="text-green-500 dark:text-green-600">
                 Available for work
@@ -26,7 +26,7 @@ const Hero = () => {
           </h1>
           <span className="gap-2">
             <p className="font-mono text-lg tracking-tight">
-              An aspiring developer from the Philippines📍.
+              An aspiring software developer from the Philippines📍.
               <br />
               Currently looking for experiences.
             </p>
