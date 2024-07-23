@@ -5,6 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const AnimationWrapper = ({ children }: { children: ReactNode }) => {
   const section = useRef<HTMLDivElement>(null);
+
   const { scrollYProgress } = useScroll({
     target: section,
     offset: ["start end", "end end"],
@@ -15,7 +16,13 @@ const AnimationWrapper = ({ children }: { children: ReactNode }) => {
   const opacity = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
 
   return (
-    <motion.div style={{ opacity, rotateX, transformPerspective: "800px" }}>
+    <motion.div
+      style={{
+        opacity,
+        rotateX,
+        transformPerspective: "800px",
+      }}
+    >
       <div ref={section} className="w-full h-full">
         {children}
       </div>

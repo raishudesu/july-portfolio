@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import Image from "next/image";
 import pfp from "@/assets/images/pfp.jpg";
+import HeroCta from "./hero-cta";
 
 const Hero = () => {
   return (
@@ -45,18 +46,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="mt-4 grid md:flex gap-2">
-        <Button size={"sm"} className="flex gap-2 items-center">
-          <CirclePlus size={15} />
-          Hire me
-        </Button>
-        <Button
-          size={"sm"}
-          variant={"secondary"}
-          className="flex gap-2 items-center"
-        >
-          <Copy size={15} />
-          Copy email
-        </Button>
+        <HeroCta />
       </div>
     </div>
   );

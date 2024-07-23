@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${GeistSans.className} bg-primary-foreground`}>
+      <body className={`${GeistSans.className} px-2 bg-primary-foreground`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
