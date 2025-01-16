@@ -13,8 +13,8 @@ type ProjectCard = {
   projectImageAlt: string;
   projectDescription: string;
   links: {
-    live: string;
-    github: string;
+    live: string | null;
+    github: string | null;
   };
   stack: string[];
 };
@@ -88,7 +88,7 @@ const ProjectCard = ({
           </div>
         </div>
         <div className="px-1 grid md:flex gap-2">
-          <LinksBtn links={links} />
+          <LinksBtn links={links || ""} />
         </div>
       </div>
     </div>

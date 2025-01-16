@@ -7,6 +7,7 @@ import reactLogo from "@/assets/tech-stack/react-logo.svg";
 import tailwindLogo from "@/assets/tech-stack/tailwind-logo.svg";
 import vercelLogo from "@/assets/tech-stack/vercel-logo.svg";
 import supabaseLogo from "@/assets/tech-stack/supabase-logo.svg";
+import parksuLogo from "@/assets/logos/parksu.svg";
 
 export const projects = [
   {
@@ -55,6 +56,18 @@ export const projects = [
     links: {
       github: "https://github.com/raishudesu/Reverie",
       live: "https://reverie-notes.web.app",
+    },
+  },
+  {
+    projectName: "ParkSU",
+    projectDescription:
+      "A Realtime Parking Monitoring System wit Data Analytics and Visualization for Palawan State University campus.",
+    projectImageUrl: parksuLogo,
+    projectImageAlt: "parksu-icon",
+    stack: ["NextJS", "Supabase", "ShadcnUI"],
+    links: {
+      github: null,
+      live: "https://parksu.vercel.app",
     },
   },
 ];
