@@ -15,7 +15,7 @@ const LinksBtn = ({
       {links.live && (
         <Button
           size={"sm"}
-          className="flex gap-2 items-center"
+          className="z-10 flex gap-2 items-center"
           onClick={() => router.push(links.live as string)}
         >
           <LinkIcon size={15} />
@@ -26,7 +26,7 @@ const LinksBtn = ({
         <Button
           size={"sm"}
           variant={"secondary"}
-          className="border dark:border-zinc-700 flex gap-2 items-center"
+          className="z-10 border dark:border-zinc-700 flex gap-2 items-center"
           onClick={() => router.push(links.github as string)}
         >
           <Github size={15} />

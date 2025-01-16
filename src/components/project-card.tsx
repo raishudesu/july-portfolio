@@ -66,7 +66,7 @@ const ProjectCard = ({
             src={projectImageUrl}
             alt={projectImageAlt}
             fill
-            objectFit="contain"
+          //objectFit="contain"
           />
         </div>
         <div className="w-full flex flex-col items-start gap-4 md:flex-row md:items-center justify-between">

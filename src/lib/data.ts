@@ -61,7 +61,7 @@ export const projects = [
   {
     projectName: "ParkSU",
     projectDescription:
-      "A Realtime Parking Monitoring System wit Data Analytics and Visualization for Palawan State University campus.",
+      "A Realtime Parking Monitoring System with Data Analytics and Visualization for Palawan State University campus.",
     projectImageUrl: parksuLogo,
     projectImageAlt: "parksu-icon",
     stack: ["NextJS", "Supabase", "ShadcnUI"],
