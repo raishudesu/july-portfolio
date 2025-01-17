@@ -6,6 +6,7 @@ import Navbar from "@/components/navbar";
 import NavigatorMobile from "@/components/navigator-mobile";
 import Projects from "@/components/projects";
 import TechStack from "@/components/tech-stack";
+import Tools from "@/components/tools";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Hero />
         <TechStack />
         <Projects />
+        <Tools />
         <Contact />
         <MyLinks />
         <Footer />

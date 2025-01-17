@@ -9,6 +9,8 @@ import vercelLogo from "@/assets/tech-stack/vercel-logo.svg";
 import supabaseLogo from "@/assets/tech-stack/supabase-logo.svg";
 import parksuLogo from "@/assets/logos/parksu.svg";
 
+import neovimLogo from "@/assets/tools/neovim.svg";
+
 export const projects = [
   {
     projectName: "Devfolio",
@@ -107,5 +109,18 @@ export const techStack = [
     name: "Vercel",
     documentationUrl: "https://vercel.com/home",
     desc: "Vercel provides the developer tools and cloud infrastructure to build, scale, and secure a faster, more personalized web.",
+  },
+];
+
+export const tools = [
+  {
+    name: "Neovim",
+    icon: neovimLogo,
+    description: "lorem ipsum",
+  },
+  {
+    name: "Git",
+    icon: neovimLogo,
+    description: "lorem ipsum",
   },
 ];
