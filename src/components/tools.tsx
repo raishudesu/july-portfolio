@@ -16,9 +16,10 @@ const Tools = () => {
           </Badge>
         </div>
       </div>
-      <h2 className="mt-4 font-medium text-3xl">Tools I Use</h2>
+      <h2 className="mt-4 font-medium text-3xl">Other Technologies I Use:</h2>
       <p className="mt-4 font-mono tracking-tight">
-        These are the tools I use to build applications.
+        ⚙️ These are some of the technologies/tools I also use to build
+        applications.
       </p>
 
       <div className="mt-6 grid md:grid-cols-2 gap-4">

@@ -47,11 +47,13 @@ const ToolsCard = ({ name, icon, description }: ToolCard) => {
         }}
         ref={border}
       ></motion.div>
-      <div className="relative h-20 w-20 overflow-hidden">
+      <div className="relative h-10 w-10 overflow-hidden">
         <Image src={icon} alt="tool-icon" fill objectFit="contain" />
       </div>
-      <h3 className="font-medium text-xl">{name}</h3>
-      <p className="font-mono">{description}</p>
+      <div className="mt-4">
+        <h3 className="font-medium text-xl">{name}</h3>
+        <p className="font-mono mt-2">{description}</p>
+      </div>
     </div>
   );
 };

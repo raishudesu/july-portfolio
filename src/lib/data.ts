@@ -10,6 +10,13 @@ import supabaseLogo from "@/assets/tech-stack/supabase-logo.svg";
 import parksuLogo from "@/assets/logos/parksu.svg";
 
 import neovimLogo from "@/assets/tools/neovim.svg";
+import gitLogo from "@/assets/tools/git.svg";
+import djangoLogo from "@/assets/tools/django.svg";
+import expressLogo from "@/assets/tools/express.svg";
+import firebaseLogo from "@/assets/tools/firebase.svg";
+import mongodbLogo from "@/assets/tools/mongodb.svg";
+import prismaLogo from "@/assets/tools/prisma.svg";
+import vscodeLogo from "@/assets/tools/vscode.svg";
 
 export const projects = [
   {
@@ -116,11 +123,48 @@ export const tools = [
   {
     name: "Neovim",
     icon: neovimLogo,
-    description: "lorem ipsum",
+    description:
+      "I use Neovim as my main code editor to build my projects. It is a lightweight and customizable editor configured from NVChad.",
   },
   {
     name: "Git",
-    icon: neovimLogo,
-    description: "lorem ipsum",
+    icon: gitLogo,
+    description:
+      "I use Git to manage and version my projects with Github for my code repositories.",
+  },
+  {
+    name: "Django",
+    icon: djangoLogo,
+    description:
+      "I have experienced working with Django to build full-stack projects, utilizing MVC architecture.",
+  },
+  {
+    name: "VSCode",
+    icon: vscodeLogo,
+    description: "It used to be my main code editor, until I learned Neovim.",
+  },
+  {
+    name: "ExpressJS",
+    icon: expressLogo,
+    description:
+      "One of the best lightweight libraries to build API technologies.",
+  },
+  {
+    name: "Firebase",
+    icon: firebaseLogo,
+    description:
+      "One of the BaaS I use for NoSQL databases and built-in authentications.",
+  },
+  {
+    name: "MongoDB",
+    icon: mongodbLogo,
+    description:
+      "Used with MongoDB Compass, to build applications that require NoSQL solution.",
+  },
+  {
+    name: "Prisma",
+    icon: prismaLogo,
+    description:
+      "My main ORM, to simplify database connections and fast typed queries.",
   },
 ];
