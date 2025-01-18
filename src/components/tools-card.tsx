@@ -2,14 +2,13 @@
 
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
-import { ReactElement } from "react";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
 
 type ToolCard = {
   name: string;
-  icon: ReactElement;
+  icon: string | StaticImport;
   description: string;
 };
 
