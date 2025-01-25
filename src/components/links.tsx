@@ -1,5 +1,24 @@
-import { Coffee, Github, Linkedin } from "lucide-react";
+import { Coffee, Github, Linkedin, Twitter } from "lucide-react";
 import Link from "next/link";
+
+export const links = [
+  {
+    link: "https://x.com/rijndael_dev",
+    icon: <Twitter size={20} />,
+  },
+  {
+    link: "https://www.linkedin.com/in/baryshbacaltos/",
+    icon: <Linkedin size={20} />,
+  },
+  {
+    link: "https://github.com/raishudesu",
+    icon: <Github size={20} />,
+  },
+  {
+    link: "https://www.buymeacoffee.com/bacaltosbarysh",
+    icon: <Coffee size={20} />,
+  },
+];
 
 const Links = () => {
   return (
@@ -9,27 +28,16 @@ const Links = () => {
           Follow Me
         </h3>
         <div className="flex gap-2">
-          <Link
-            href={"https://www.linkedin.com/in/baryshbacaltos/"}
-            target="_blank"
-            className="p-4 rounded-lg border"
-          >
-            <Linkedin size={20} />
-          </Link>
-          <Link
-            href={"https://github.com/raishudesu"}
-            target="_blank"
-            className="p-4 rounded-lg border "
-          >
-            <Github size={20} />
-          </Link>
-          <Link
-            href={"https://www.buymeacoffee.com/bacaltosbarysh"}
-            target="_blank"
-            className="p-4 rounded-lg border "
-          >
-            <Coffee size={20} />
-          </Link>
+          {links.map(({ link, icon }, index) => (
+            <Link
+              key={index}
+              href={link}
+              target="_blank"
+              className="p-4 rounded-lg border"
+            >
+              {icon}
+            </Link>
+          ))}
         </div>
       </div>
     </div>
