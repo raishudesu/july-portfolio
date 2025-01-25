@@ -1,4 +1,4 @@
-import { Coffee, Github } from "lucide-react";
+import { Coffee, Github, Linkedin } from "lucide-react";
 import Link from "next/link";
 
 const Links = () => {
@@ -9,6 +9,13 @@ const Links = () => {
           Follow Me
         </h3>
         <div className="flex gap-2">
+          <Link
+            href={"https://www.linkedin.com/in/baryshbacaltos/"}
+            target="_blank"
+            className="p-4 rounded-lg border"
+          >
+            <Linkedin size={20} />
+          </Link>
           <Link
             href={"https://github.com/raishudesu"}
             target="_blank"
