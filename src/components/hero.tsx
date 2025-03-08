@@ -1,9 +1,8 @@
-import { CirclePlus, Copy } from "lucide-react";
-import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import Image from "next/image";
 import pfp from "@/assets/images/pfp.jpg";
 import HeroCta from "./hero-cta";
+import { spaceMono } from "@/lib/fonts";
 
 const Hero = () => {
   return (
@@ -13,23 +12,19 @@ const Hero = () => {
           <div className="flex flex-wrap justify-between items-start">
             <Badge className="bg-zinc-100 hover:bg-zinc-200 flex gap-2">
               <div className="bg-zinc-500 h-1.5 w-1.5 rounded-full"></div>
-              <span className="text-zinc-500">Software Developer</span>
-            </Badge>
-            <Badge className="bg-green-100 dark:bg-green-200 hover:bg-green-200 flex gap-2">
-              <div className="bg-green-500 dark:bg-green-600 h-1.5 w-1.5 rounded-full animate-pulse"></div>
-              <span className="text-green-500 dark:text-green-600">
-                Available for work
+              <span className="text-zinc-500 font-mono">
+                Software Developer
               </span>
             </Badge>
           </div>
-          <h1 className="font-medium text-7xl tracking-wider">
-            I&lsquo;m Barysh Bacaltos
+          <h1
+            className={`${spaceMono.className} font-medium text-7xl tracking-wider`}
+          >
+            Always think outside the box.
           </h1>
           <span className="gap-2">
             <p className="font-mono text-lg tracking-tight">
-              An aspiring software developer from the Philippines📍.
-              <br />
-              Currently looking for experiences.
+              Hey there! I am Barysh Bacaltos, a Software Developer.
             </p>
           </span>
         </div>

@@ -31,18 +31,7 @@ export const projects = [
       live: "https://devfolio-prod.vercel.app",
     },
   },
-  {
-    projectName: "eStudev",
-    projectDescription:
-      "Discover a collaborative network of student developers to elevate your development skills and tech career aspirations.",
-    projectImageUrl: estudevPfp,
-    projectImageAlt: "devfolio-icon",
-    stack: ["NextJS", "Supabase", "ShadcnUI"],
-    links: {
-      github: "https://github.com/raishudesu/eStudev",
-      live: "https://estudev.vercel.app",
-    },
-  },
+
   {
     projectName: "Quillify",
     projectDescription:
@@ -87,44 +76,43 @@ export const techStack = [
     alt: "react-icon",
     name: "React",
     documentationUrl: "https://react.dev",
-    desc: "The library for web and native user interfaces",
+    desc: "A powerful JavaScript library for building dynamic, interactive user interfaces with reusable components.",
   },
   {
     path: nextJsLogo,
     alt: "next-js-icon",
     name: "NextJS",
     documentationUrl: "https://nextjs.org",
-    desc: "Used by some of the world's largest companies, Next.js enables you to create high-quality web applications with the power of React components.",
+    desc: "A React framework for server-side rendering, static site generation, and simplified routing for fast, SEO-friendly web apps.",
   },
   {
     path: tailwindLogo,
     alt: "tailwind-icon",
     name: "Tailwind CSS",
     documentationUrl: "https://tailwindcss.com",
-    desc: "A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.",
+    desc: "A utility-first CSS framework for rapidly designing custom, responsive layouts with minimal code.",
   },
   {
     path: supabaseLogo,
     alt: "supabase-icon",
     name: "Supabase",
     documentationUrl: "https://supabase.com",
-    desc: "Supabase is an open source Firebase alternative. Start your project with a Postgres database, Authentication, instant APIs, Edge Functions, Realtime subscriptions, Storage, and Vector embeddings.",
+    desc: "An open-source backend-as-a-service platform providing real-time databases, authentication, and APIs with PostgreSQL.",
   },
   {
     path: vercelLogo,
     alt: "vercel-icon",
     name: "Vercel",
     documentationUrl: "https://vercel.com/home",
-    desc: "Vercel provides the developer tools and cloud infrastructure to build, scale, and secure a faster, more personalized web.",
+    desc: "A deployment platform for frontend frameworks, offering seamless scaling, domain management, and automatic HTTPS.",
   },
 ];
 
 export const tools = [
   {
-    name: "Neovim",
-    icon: neovimLogo,
-    description:
-      "I use Neovim as my main code editor to build my projects. It is a lightweight and customizable editor configured from NVChad.",
+    name: "VSCode",
+    icon: vscodeLogo,
+    description: "My main code editor. Can't live without my extensions.",
   },
   {
     name: "Git",
@@ -138,11 +126,7 @@ export const tools = [
     description:
       "I have experienced working with Django to build full-stack projects, utilizing MVC architecture.",
   },
-  {
-    name: "VSCode",
-    icon: vscodeLogo,
-    description: "It used to be my main code editor, until I learned Neovim.",
-  },
+
   {
     name: "ExpressJS",
     icon: expressLogo,

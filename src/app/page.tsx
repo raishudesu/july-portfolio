@@ -3,7 +3,6 @@ import Footer from "@/components/footer";
 import Hero from "@/components/hero";
 import MyLinks from "@/components/my-links";
 import Navbar from "@/components/navbar";
-import NavigatorMobile from "@/components/navigator-mobile";
 import Projects from "@/components/projects";
 import TechStack from "@/components/tech-stack";
 import Tools from "@/components/tools";
@@ -20,9 +19,8 @@ export default function Home() {
         <Tools />
         <Contact />
         <MyLinks />
-        <Footer />
       </div>
-      <NavigatorMobile />
+      <Footer />
     </main>
   );
 }

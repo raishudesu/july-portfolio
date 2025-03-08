@@ -1,22 +1,16 @@
 import { Fragment } from "react";
-import { Badge } from "@/components/ui/badge";
 import { tools } from "@/lib/data";
 import AnimationWrapper from "@/components/animation-wrapper";
 
 import ToolsCard from "@/components/tools-card";
+import { spaceMono } from "@/lib/fonts";
 
 const Tools = () => {
   return (
     <div className="mt-16 w-full rounded-xl overflow-hidden">
-      <div className="flex flex-col gap-4">
-        <div className="flex flex-wrap justify-between items-start">
-          <Badge className="bg-zinc-100 hover:bg-zinc-200 flex gap-2">
-            <div className="bg-zinc-500 h-1.5 w-1.5 rounded-full"></div>
-            <span className="text-zinc-500">Tools</span>
-          </Badge>
-        </div>
-      </div>
-      <h2 className="mt-4 font-medium text-3xl">Other Technologies I Use:</h2>
+      <h2 className={`${spaceMono.className} mt-4 font-medium text-3xl`}>
+        Tools:
+      </h2>
       <p className="mt-4 font-mono tracking-tight">
         ⚙️ These are some of the technologies/tools I also use to build
         applications.
