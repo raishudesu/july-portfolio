@@ -1,6 +1,5 @@
 import { projects } from "@/lib/data";
 import ProjectCard from "./project-card";
-import { Badge } from "./ui/badge";
 import { Fragment } from "react";
 import AnimationWrapper from "./animation-wrapper";
 import { spaceMono } from "@/lib/fonts";

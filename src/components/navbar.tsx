@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <nav className="bg-primary-foreground border-b sticky z-50 top-2 w-full  flex justify-center items-center">
       <div className="w-full max-w-5xl flex justify-between items-center p-2">
-        <span className={`${spaceMono.className} text-lg`}>barysh.dev</span>
+        <span className={`${spaceMono.className} text-lg`}>barkov</span>
         <div className="flex gap-2">
           <div className="hidden md:flex items-center">
             <NavBtns />

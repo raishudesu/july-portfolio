@@ -9,11 +9,11 @@ const Tools = () => {
   return (
     <div className="mt-16 w-full rounded-xl overflow-hidden">
       <h2 className={`${spaceMono.className} mt-4 font-medium text-3xl`}>
-        Tools:
+        Other Technologies:
       </h2>
       <p className="mt-4 font-mono tracking-tight">
-        ⚙️ These are some of the technologies/tools I also use to build
-        applications.
+        ⚙️ These are some of the technologies/tools I also use to build, manage,
+        and monitor applications.
       </p>
 
       <div className="mt-6 grid md:grid-cols-2 gap-4">

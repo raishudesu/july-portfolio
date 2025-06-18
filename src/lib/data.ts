@@ -17,6 +17,7 @@ import firebaseLogo from "@/assets/tools/firebase.svg";
 import mongodbLogo from "@/assets/tools/mongodb.svg";
 import prismaLogo from "@/assets/tools/prisma.svg";
 import vscodeLogo from "@/assets/tools/vscode.svg";
+import figmaLogo from "@/assets/tools/figma.svg";
 
 export const projects = [
   {
@@ -64,7 +65,7 @@ export const projects = [
     projectImageAlt: "parksu-icon",
     stack: ["NextJS", "Supabase", "ShadcnUI"],
     links: {
-      github: null,
+      github: "https://github.com/raishudesu/parking-monitoring",
       live: "https://parksu.vercel.app",
     },
   },
@@ -150,5 +151,11 @@ export const tools = [
     icon: prismaLogo,
     description:
       "My main ORM, to simplify database connections and fast typed queries.",
+  },
+  {
+    name: "Figma",
+    icon: figmaLogo,
+    description:
+      "A powerful design tool I use to create UI/UX designs and prototypes for my projects.",
   },
 ];

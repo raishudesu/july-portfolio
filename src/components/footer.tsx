@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="flex justify-center items-center">
         <p className={`${spaceMono.className} flex text-center items-center`}>
           <Copyright className="h-4 w-4" />
-          2025 barysh.dev
+          {new Date().getFullYear()} barkov
         </p>
       </div>
     </footer>
