@@ -6,7 +6,6 @@ import { z } from "zod";
 import { Form } from "@/components/ui/form";
 import { submitForm } from "@/actions/form-submit";
 import { FormSchema } from "@/lib/zod";
-import { useActionState, useEffect } from "react";
 import FormInputFields from "./form-input-fields";
 import { toast } from "sonner";
 
@@ -20,19 +19,22 @@ const ContactForm = () => {
     },
   });
 
-  const initialState = {
-    errors: {},
-  };
+  const onSubmit = async (data: z.infer<typeof FormSchema>) => {
+    const formData = new FormData();
 
-  const [state, formAction] = useActionState(submitForm, initialState);
+    console.log(formData);
+    Object.entries(data).forEach(([key, value]) => {
+      formData.append(key, value as string);
+    });
 
-  useEffect(() => {
-    if (state.errors) {
+    const result = await submitForm(formData);
+
+    if (result?.errors) {
       (["firstName", "lastName", "message"] as const).forEach((key) => {
-        if (state.errors[key]) {
+        if (result.errors[key]) {
           form.setError(key, {
             type: "manual",
-            message: state.errors[key][0],
+            message: result.errors[key][0],
           });
         }
       });
@@ -44,11 +46,11 @@ const ContactForm = () => {
         description: "Thanks for hitting me up! 🎉",
       });
     }
-  }, [state, form]);
+  };
 
   return (
     <Form {...form}>
-      <form action={formAction} className="grid space-y-4">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="grid space-y-4">
         <FormInputFields form={form} />
       </form>
     </Form>

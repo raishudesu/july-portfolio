@@ -3,12 +3,14 @@
 import { FormSchema } from "@/lib/zod";
 import { Resend } from "resend";
 
-export const submitForm = async (prevState: any, formData: FormData) => {
+export const submitForm = async (formData: FormData) => {
   const validatedFields = FormSchema.safeParse({
     firstName: formData.get("firstName"),
     lastName: formData.get("lastName"),
     message: formData.get("message"),
   });
+
+  console.log(validatedFields);
 
   // Return early if the form data is invalid
   if (!validatedFields.success) {
@@ -33,6 +35,8 @@ export const submitForm = async (prevState: any, formData: FormData) => {
       subject: "Portfolio Form Submission",
       html: htmlStringTemplate,
     });
+
+    console.log(resend);
 
     if (error) {
       return { message: error };
