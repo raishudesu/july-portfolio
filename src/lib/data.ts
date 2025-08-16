@@ -18,8 +18,33 @@ import mongodbLogo from "@/assets/tools/mongodb.svg";
 import prismaLogo from "@/assets/tools/prisma.svg";
 import vscodeLogo from "@/assets/tools/vscode.svg";
 import figmaLogo from "@/assets/tools/figma.svg";
+import fundrLogo from "@/assets/logos/fundr-logo.svg";
 
 export const projects = [
+  {
+    projectName: "Fundr Business Support Services",
+    projectDescription:
+      "A Platform to provide financial information and transparency to Fundr Clients.",
+    projectImageUrl: fundrLogo,
+    projectImageAlt: "parksu-icon",
+    stack: ["NextJS", "Supabase", "ShadcnUI"],
+    links: {
+      github: null,
+      live: "https://fundrph.org",
+    },
+  },
+  {
+    projectName: "ParkSU",
+    projectDescription:
+      "A Realtime Parking Monitoring System with Data Analytics and Visualization for Palawan State University campus.",
+    projectImageUrl: parksuLogo,
+    projectImageAlt: "parksu-icon",
+    stack: ["NextJS", "Supabase", "ShadcnUI"],
+    links: {
+      github: "https://github.com/raishudesu/parking-monitoring",
+      live: "https://parksu.vercel.app",
+    },
+  },
   {
     projectName: "Devfolio",
     projectDescription:
@@ -55,18 +80,6 @@ export const projects = [
     links: {
       github: "https://github.com/raishudesu/Reverie",
       live: "https://reverie-notes.web.app",
-    },
-  },
-  {
-    projectName: "ParkSU",
-    projectDescription:
-      "A Realtime Parking Monitoring System with Data Analytics and Visualization for Palawan State University campus.",
-    projectImageUrl: parksuLogo,
-    projectImageAlt: "parksu-icon",
-    stack: ["NextJS", "Supabase", "ShadcnUI"],
-    links: {
-      github: "https://github.com/raishudesu/parking-monitoring",
-      live: "https://parksu.vercel.app",
     },
   },
 ];

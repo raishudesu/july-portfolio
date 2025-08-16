@@ -6,8 +6,7 @@ import { z } from "zod";
 import { Form } from "@/components/ui/form";
 import { submitForm } from "@/actions/form-submit";
 import { FormSchema } from "@/lib/zod";
-import { useFormState } from "react-dom";
-import { useEffect } from "react";
+import { useActionState, useEffect } from "react";
 import FormInputFields from "./form-input-fields";
 import { toast } from "sonner";
 
@@ -25,7 +24,7 @@ const ContactForm = () => {
     errors: {},
   };
 
-  const [state, formAction] = useFormState(submitForm, initialState);
+  const [state, formAction] = useActionState(submitForm, initialState);
 
   useEffect(() => {
     if (state.errors) {

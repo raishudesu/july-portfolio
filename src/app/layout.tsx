@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="light" style={{ colorScheme: "light" }}>
       <body className={`${GeistSans.className} px-2 bg-primary-foreground`}>
         <ThemeProvider
           attribute="class"
