@@ -17,16 +17,31 @@ import firebaseLogo from "@/assets/tools/firebase.svg";
 import mongodbLogo from "@/assets/tools/mongodb.svg";
 import prismaLogo from "@/assets/tools/prisma.svg";
 import vscodeLogo from "@/assets/tools/vscode.svg";
+import dotnetLogo from "@/assets/tools/dotnet.svg";
+import awsLogo from "@/assets/tools/aws.svg";
 import figmaLogo from "@/assets/tools/figma.svg";
 import fundrLogo from "@/assets/logos/fundr-logo.svg";
+import rentaLogo from "@/assets/logos/renta-logo.svg";
 
 export const projects = [
+  {
+    projectName: "Renta",
+    projectDescription:
+      "The simplest way to rent vehicles. Owners list their cars, renters book instantly, and QR codes make pickup seamless. No paperwork, no hassle.",
+    projectImageUrl: rentaLogo,
+    projectImageAlt: "renta-icon",
+    stack: ["NextJS", "ASP.NET Core", "ShadcnUI", "AWS"],
+    links: {
+      github: null,
+      live: "https://renta-prod.vercel.app",
+    },
+  },
   {
     projectName: "Fundr Business Support Services",
     projectDescription:
       "A Platform to provide financial information and transparency to Fundr Clients.",
     projectImageUrl: fundrLogo,
-    projectImageAlt: "parksu-icon",
+    projectImageAlt: "fundr-icon",
     stack: ["NextJS", "Supabase", "ShadcnUI"],
     links: {
       github: null,
@@ -170,5 +185,17 @@ export const tools = [
     icon: figmaLogo,
     description:
       "A powerful design tool I use to create UI/UX designs and prototypes for my projects.",
+  },
+  {
+    name: "ASP.NET Core",
+    icon: dotnetLogo,
+    description:
+      "Free, open-source, cross-platform framework for building modern apps and powerful cloud services.",
+  },
+  {
+    name: "Amazon Web Services",
+    icon: awsLogo,
+    description:
+      "Reliable, scalable, and inexpensive cloud computing services to host my APIs, databases, and storage.",
   },
 ];
